@@ -32,8 +32,6 @@ async function run() {
       ref
     });
 
-    console.log(deployments.data);
-
     if (deployments && deployments.data.length) {
       await github.repos.createDeploymentStatus({
         deployment_id: deployments.data[0].id,
@@ -52,7 +50,10 @@ async function run() {
         token
       )}&owner=${encodeURIComponent(owner)}&repo=${encodeURIComponent(
         repo
-      )}&ref=${encodeURIComponent(ref)}`
+      )}&ref=${encodeURIComponent(ref)}`,
+      {
+        method: "DELETE"
+      }
     );
 
     if (!res.ok) {
