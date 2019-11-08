@@ -1,0 +1,23 @@
+name: "Lona Clean GitHub Action"
+description: "A Github Action to clean the deployment made by the main Lona GitHub Action."
+author: "Mathieu Dutour"
+inputs:
+  github_token:
+    description: "Required for Lona to check the permissions."
+    required: true
+  ref_type:
+    description: "The object that was deleted. Can be `branch` or `tag`."
+    required: true
+  ref_name:
+    description: "The git ref that was deleted."
+    required: true
+  lona_api_base_url:
+    description: "The Lona API server."
+    required: false
+    default: https://81q1ce2llf.execute-api.eu-west-1.amazonaws.com/dev
+runs:
+  using: "node12"
+  main: "lib/main.js"
+branding:
+  icon: "git-merge"
+  color: "red"

@@ -1,0 +1,35 @@
+{
+  "name": "lona-clean-github-action",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Github Action to clean the deployment made by the main Lona GitHub Action.",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lona/lona-clean-github-action.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "lona"
+  ],
+  "author": "Mathieu Dutour",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0",
+    "jszip": "^3.2.2",
+    "klaw": "^3.0.0",
+    "node-fetch": "*"
+  },
+  "devDependencies": {
+    "@types/jszip": "^3.1.6",
+    "@types/klaw": "^3.0.0",
+    "@types/node": "^12.0.4",
+    "@types/node-fetch": "^2.5.3",
+    "typescript": "^3.5.1"
+  }
+}
